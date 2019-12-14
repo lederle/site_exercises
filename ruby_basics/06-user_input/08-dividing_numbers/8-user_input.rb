@@ -39,3 +39,26 @@ end
 # 5
 # >> 10 / 5 is 2
 #
+num = 0
+denom = 0
+loop do
+  puts "Please enter the numerator:"
+  num = gets.chomp
+  break if valid_number?(num)
+  puts "Invalid input. Only integers are allowed."
+end
+
+loop do
+  puts "Please enter the denominator:"
+  denom = gets.chomp
+  unless valid_number?(denom)
+    puts "Invalid input. Only integers are allowed."
+    next
+  end
+  if denom.to_i.zero?
+    puts "Invalid input. A denominator of 0 is not allowed."
+    next
+  end
+  break
+end
+puts "#{num} / #{denom} is #{num.to_i / denom.to_i}"
