@@ -28,3 +28,22 @@
 # >> Do you want me to print something? (y/n)
 # n
 
+loop do
+  puts "Do you want me to print something? (y/n)"
+  input = gets.chomp.downcase
+  unless input == 'y' || input == 'n'
+    puts "Invalid input! Please enter y or n"
+    next
+  end
+  puts "something" if input == 'y'
+  break
+end
+
+#choice = nil
+#loop do
+#  puts '>> Do you want me to print something? (y/n)'
+#  choice = gets.chomp.downcase
+#  break if %w(y n).include?(choice)
+#  puts '>> Invalid input! Please enter y or n'
+#end
+#puts 'something' if choice == 'y'
