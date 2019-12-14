@@ -5,5 +5,8 @@ numbers = []
 loop do
   puts 'Enter any number:'
   input = gets.chomp.to_i
+  numbers << input
+  break 10.times {print "*"} if numbers.size == 5
 end
+puts
 puts numbers
