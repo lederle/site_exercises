@@ -7,3 +7,7 @@
 # This is what I typed.
 # This is what I typed.
 
+puts "Type anything you want:"
+input = gets.chomp
+puts input
+
